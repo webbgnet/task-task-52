@@ -9,28 +9,28 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body onclick="repeat()">
+  <body>
     <div class="main">
       <div class="emoji mb-6">💣🤯💥</div>
       <button class="button">Boom?</button>
     </div>
 
-<article class="message" id="repeatTHIS">
-    lipsum dasd sa dfasf sd f
-</article>
 
 
 
 <script>
-
-    var i = 0;
-    var original = document.getElementById('repeatTHIS');
+let main = document.querySelector('body');
     
-    function repeat() {
-      var clone = original.cloneNode(true);
-      clone.id = "repeatTHIS1" + ++i; 
-      original.parentNode.appendChild(clone);
-    }
+    main.addEventListener('click',onClick);
+    function onClick() {
+      for (let index = 1; index <6; index++) {
+
+      let article = document.createElement('article');
+      article.className='message';
+      article.textContent='Hello '+ index;
+      main.append(article)
+       
+    }}
       </script>
   </body>
 </html>

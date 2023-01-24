@@ -14,15 +14,24 @@
       <div class="emoji mb-6">💣🤯💥</div>
       <button class="button">Boom?</button>
     </div>
+
+
+
+
+<script>
+let main = document.querySelector('body');
     
-    <script>
-for (let i = 0; i < 5; i++) {
-  let message = document.createElement("article");
-  message.classList.add("message");
-  message.textContent = "Sample text content";
-  document.body.appendChild(message);
-}
+    main.addEventListener('click',onClick);
+    function onClick() {
+      for (let index = 1; index <6; index++) {
+
+      let article = document.createElement('article');
+      article.className='message';
+      article.textContent='Hello '+ index;
+      main.append(article)
+       
+    }}
       </script>
-    
   </body>
 </html>
+
